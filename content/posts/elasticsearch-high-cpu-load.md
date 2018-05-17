@@ -1,7 +1,7 @@
 ---
 title: "elasticsearch - high CPU and load"
 date: 2018-05-16T18:02:55-07:00
-draft: true
+draft: false
 ---
 Ran into an issue with out production elasticsearch cluster today. Looking at the metrics for our cluster (via Kopf), CPU and load shot through the roof and was pretty much all maxed out. Taking a look at the application logs within our ELK cluster also did not help. All I saw were a bunch of "slowlog" log entries. Fortunately, with a couple of Google searches, I found that by calling the ["hot threads" endpoint](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-hot-threads.html), I can examine threads for each node along with their respective CPU usage. This was when I saw the following:
 
