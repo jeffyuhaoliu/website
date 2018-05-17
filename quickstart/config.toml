@@ -1,0 +1,6 @@
+baseURL = "https://jeffyuhaoliu.github.io/website/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "ananke"
+themesDir = "./themes"
+relativeURLs = true
